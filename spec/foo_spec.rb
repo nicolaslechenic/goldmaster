@@ -13,7 +13,6 @@ RSpec.describe Foo do
         write_goldmaster(csv_goldmaster, out_path)
       else
         goldmaster_to_ary = CSV.foreach(out_path).map(&:first)
-
         expect(bar_values).to eql(goldmaster_to_ary)
       end
     end
